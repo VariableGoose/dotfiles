@@ -6,6 +6,12 @@ return {
         "hrsh7th/cmp-nvim-lsp",
         "simrat39/rust-tools.nvim",
     },
+    opts = {
+        ensure_installed = {
+            "clangd",
+            "codelldb",
+        },
+    },
     config = function ()
         require("mason").setup()
         require("mason-lspconfig").setup()
